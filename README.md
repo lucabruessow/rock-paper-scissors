@@ -1,0 +1,1 @@
+The aim of this exercise is to create a simple rock-paper-scissors game, with the intention of laying the foundations for understanding JavaScript.
