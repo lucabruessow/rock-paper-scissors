@@ -6,8 +6,5 @@ function convertNumberToChoice(choiceNumber) {
 
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3 + 1);
-    console.log(computerChoice);
     return convertNumberToChoice(computerChoice);
 }
-
-console.log(getComputerChoice());
