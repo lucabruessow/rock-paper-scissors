@@ -8,3 +8,8 @@ function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3 + 1);
     return convertNumberToChoice(computerChoice);
 }
+
+function getHumanChoice() {
+    let humanChoice = prompt("Choose rock [1], paper [2] or scissor [3].");
+    return convertNumberToChoice(humanChoice);
+}
