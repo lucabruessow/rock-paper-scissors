@@ -1,7 +1,7 @@
 function convertNumberToChoice(choiceNumber) {
-    if (choiceNumber == 1) { return "Rock"; }
-    else if (choiceNumber == 2) { return "Paper"; }
-    else if (choiceNumber == 3) { return "Scissors"; }
+    if (choiceNumber == 1) { return "rock"; }
+    else if (choiceNumber == 2) { return "paper"; }
+    else if (choiceNumber == 3) { return "scissors"; }
 }
 
 function getComputerChoice() {
@@ -10,8 +10,8 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let humanChoice = prompt("Choose rock [1], paper [2] or scissors [3].");
-    return convertNumberToChoice(humanChoice);
+    let humanChoice = prompt("Choose rock, paper or scissors.").toLowerCase();
+    return humanChoice;
 }
 
 function playRound(humanChoice, computerChoice) {
