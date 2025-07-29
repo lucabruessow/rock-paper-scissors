@@ -15,19 +15,40 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice == "Rock") {
-        if (computerChoice == "Rock") { return "draw" }
-        if (computerChoice == "Paper") { return "lose" }
-        if (computerChoice == "Scissors") { return "win" }
+    if (humanChoice == "rock") {
+        if (computerChoice == "rock") { return "Draw" }
+        if (computerChoice == "paper") { return "Lose" }
+        if (computerChoice == "scissors") { return "Win" }
     }
-    if (humanChoice == "Paper") {
-        if (computerChoice == "Rock") { return "win" }
-        if (computerChoice == "Paper") { return "draw" }
-        if (computerChoice == "Scissors") { return "lose" }
+    if (humanChoice == "paper") {
+        if (computerChoice == "rock") { return "Win" }
+        if (computerChoice == "paper") { return "Draw" }
+        if (computerChoice == "scissors") { return "Lose" }
     }
-    if (humanChoice == "Scissors") {
-        if (computerChoice == "Rock") { return "lose" }
-        if (computerChoice == "Paper") { return "win" }
-        if (computerChoice == "Scissors") { return "draw" }
+    if (humanChoice == "scissors") {
+        if (computerChoice == "rock") { return "Lose" }
+        if (computerChoice == "paper") { return "Win" }
+        if (computerChoice == "scissors") { return "Draw" }
     }
+}
+
+let computerScore = 0
+let humanScore = 0
+
+for (let step = 0; step < 5; step++) {
+
+    let isWin = playRound(getHumanChoice(), getComputerChoice());
+
+    if (isWin == "Lose") {
+        computerScore += 1;
+    }
+
+    if (isWin == "Win") {
+        humanScore += 1;
+    }
+
+    console.log(`${isWin}.
+        Your Score: ${humanScore}
+        Computer Score: ${computerScore}`)
+
 }
