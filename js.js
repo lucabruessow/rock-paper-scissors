@@ -48,7 +48,7 @@ for (let step = 0; step < 5; step++) {
     }
 
     console.log(`${isWin}.
-        Your Score: ${humanScore}
-        Computer Score: ${computerScore}`)
+Your Score: ${humanScore}
+Computer Score: ${computerScore}`)
 
 }
