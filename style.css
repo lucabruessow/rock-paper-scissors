@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+
+header {
+    color: antiquewhite;
+    background-color: #38444d;
+    padding: 20px;
+    margin: 0px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0px;
+    font-family: "Sofia", sans-serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
