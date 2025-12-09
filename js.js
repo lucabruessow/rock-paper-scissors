@@ -30,7 +30,7 @@ function isWin(humanChoice, computerChoice) {
 function playRound(event) {
     const humanChoice = event.target.id;
     const computerChoice = getComputerChoice();
-    result = isWin(humanChoice, computerChoice);
+    const result = isWin(humanChoice, computerChoice);
 }
 
 let computerScore = 0
