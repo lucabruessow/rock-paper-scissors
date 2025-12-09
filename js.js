@@ -9,12 +9,7 @@ function getComputerChoice() {
     return convertNumberToChoice(computerChoice);
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Choose rock, paper or scissors.").toLowerCase();
-    return humanChoice;
-}
-
-function playRound(humanChoice, computerChoice) {
+function isWin(humanChoice, ComputerChoice) {
     if (humanChoice == "rock") {
         if (computerChoice == "rock") { return "Draw" }
         if (computerChoice == "paper") { return "Lose" }
@@ -32,23 +27,16 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+function playRound(event) {
+    humanChoice = event.target.id;
+    computerChoice = getComputerChoice();
+    result = isWin(humanChoice, computerChoice);
+}
+
 let computerScore = 0
 let humanScore = 0
 
-for (let step = 0; step < 5; step++) {
-
-    let isWin = playRound(getHumanChoice(), getComputerChoice());
-
-    if (isWin == "Lose") {
-        computerScore += 1;
-    }
-
-    if (isWin == "Win") {
-        humanScore += 1;
-    }
-
-    console.log(`${isWin}.
-Your Score: ${humanScore}
-Computer Score: ${computerScore}`)
-
-}
+const buttons = document.querySelectorAll(".choice");
+    buttons.forEach(button => {
+        button.addEventListener("click", playRound);
+    });
