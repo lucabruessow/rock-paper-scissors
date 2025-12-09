@@ -9,7 +9,7 @@ function getComputerChoice() {
     return convertNumberToChoice(computerChoice);
 }
 
-function isWin(humanChoice, ComputerChoice) {
+function isWin(humanChoice, computerChoice) {
     if (humanChoice == "rock") {
         if (computerChoice == "rock") { return "Draw" }
         if (computerChoice == "paper") { return "Lose" }
@@ -28,8 +28,8 @@ function isWin(humanChoice, ComputerChoice) {
 }
 
 function playRound(event) {
-    humanChoice = event.target.id;
-    computerChoice = getComputerChoice();
+    const humanChoice = event.target.id;
+    const computerChoice = getComputerChoice();
     result = isWin(humanChoice, computerChoice);
 }
 
