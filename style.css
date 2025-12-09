@@ -46,3 +46,15 @@ h1 {
     margin-right: 175px;
     padding: 0px;
 }
+
+.score {
+    display: flex;
+    flex-direction: row;
+    gap: 110px;
+    justify-content: center;
+}
+
+.score p {
+    font-size: 50px;
+    text-align: center;
+}
