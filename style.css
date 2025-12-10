@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Sofia&effect=fire');
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 header {
-    color: antiquewhite;
-    background-color: #38444d;
-    padding: 20px;
+    color: #FFD700;
+    background-color: #3357FF;
+    padding: 25px 0px 25px;
     margin: 0px;
     text-align: center;
+    text-shadow: -7px 5px 0 #000;
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 100px;
     margin: 0px;
-    font-family: "Sofia", sans-serif;
+    font-family: "Bangers", sans-serif;
     font-weight: 400;
-    letter-spacing: 2px;
 }
 
 .game-board {
-    margin: 75px 0px 50px 0px;
-    padding: 0px;
+    background-color: #FFD700;
+    margin: 0px;
+    padding: 50px 0px 50px 0px;
 }
 
 .row-icons {
@@ -55,6 +56,10 @@ h1 {
 }
 
 p {
+    margin-bottom: 0px;
+    font-family: "Bangers", sans-serif;
+    color: #FF5733;
     font-size: 50px;
     text-align: center;
+    text-shadow: -4px 4px 0 #000;
 }
