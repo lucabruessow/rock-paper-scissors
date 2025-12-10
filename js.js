@@ -42,10 +42,10 @@ function startAgain() {
 function showGameEndOverlay(user, computer) {
     const overlayResultText = document.querySelector(".overlay-content p");
     overlay.classList.remove("hidden");
-    if (user = 5) {
+    if (user === 5) {
         overlayResultText.textContent = "You won!";
     }
-    if (computer = 5) {
+    if (computer === 5) {
         overlayResultText.textContent = "You lose!";
     }
 }
