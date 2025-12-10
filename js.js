@@ -39,8 +39,15 @@ function startAgain() {
     overlay.classList.add("hidden");
 }
 
-function showGameEndOverlay(userScore, computerScore) {
+function showGameEndOverlay(user, computer) {
+    const overlayResultText = document.querySelector(".overlay-content p");
     overlay.classList.remove("hidden");
+    if (user = 5) {
+        overlayResultText.textContent = "You won!";
+    }
+    if (computer = 5) {
+        overlayResultText.textContent = "You lose!";
+    }
 }
 
 function updateDOM(result, humanChoice, computerChoice) {
@@ -69,7 +76,7 @@ function updateDOM(result, humanChoice, computerChoice) {
     const computer = parseInt(computerScore.textContent);
 
     if (computer >= 5 || user >= 5) {
-        showGameEndOverlay(userScore, computerScore);
+        showGameEndOverlay(user, computer);
     }
 }
 

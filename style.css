@@ -78,11 +78,27 @@ p {
     background: #FFD700;
     padding: 20px 40px;
     border-radius: 10px;
-    box-shadow: 0 8px 0 #000;
+    box-shadow: -8px 8px 0 #000;
     font-family: "Bangers", sans-serif;
     text-align: center;
 }
 
+.overlay-content p {
+    margin: 20px;
+    font-size: 100px;
+    text-shadow: -7px 5px 0 #000;
+}
+
+.overlay-content button {
+    margin-bottom: 20px;
+    font-family: "Bangers", sans-serif;
+    font-size: 30px;
+    border: none;
+    border-radius: 3px;
+    background-color: #3357FF;
+    color:#FFD700;
+    box-shadow: -4px 4px #000;
+}
 .hidden {
     display: none;
 }
