@@ -27,6 +27,22 @@ function isWin(humanChoice, computerChoice) {
     }
 }
 
+function startAgain() {
+    const userScore = document.querySelector(".user-score-num");
+    const computerScore = document.querySelector(".computer-score-num");
+    const resultDiv = document.querySelector(".result p");
+
+    userScore.textContent = 0;
+    computerScore.textContent = 0;
+    resultDiv.textContent = "";
+
+    overlay.classList.add("hidden");
+}
+
+function showGameEndOverlay(userScore, computerScore) {
+    overlay.classList.remove("hidden");
+}
+
 function updateDOM(result, humanChoice, computerChoice) {
     const userScore = document.querySelector(".user-score-num");
     const computerScore = document.querySelector(".computer-score-num");
@@ -48,6 +64,13 @@ function updateDOM(result, humanChoice, computerChoice) {
             let newComputerScore = parseInt(computerScore.textContent) + 1;
             computerScore.textContent = newComputerScore
     }
+
+    const user = parseInt(userScore.textContent);
+    const computer = parseInt(computerScore.textContent);
+
+    if (computer >= 5 || user >= 5) {
+        showGameEndOverlay(userScore, computerScore);
+    }
 }
 
 function playRound(event) {
@@ -57,7 +80,12 @@ function playRound(event) {
     updateDOM(result, humanChoice, computerChoice);
 }
 
+const overlay = document.querySelector(".overlay");
+const overlayClose = document.querySelector(".close-overlay")
+
 const buttons = document.querySelectorAll(".choice");
     buttons.forEach(button => {
         button.addEventListener("click", playRound);
     });
+
+overlayClose.addEventListener("click", startAgain);
