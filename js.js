@@ -34,7 +34,7 @@ function startAgain() {
 
     userScore.textContent = 0;
     computerScore.textContent = 0;
-    resultDiv.textContent = "";
+    resultDiv.textContent = "Have fun!";
 
     overlay.classList.add("hidden");
 }
