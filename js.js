@@ -27,14 +27,35 @@ function isWin(humanChoice, computerChoice) {
     }
 }
 
+function updateDOM(result, humanChoice, computerChoice) {
+    const userScore = document.querySelector(".user-score-num");
+    const computerScore = document.querySelector(".computer-score-num");
+    const resultDiv = document.querySelector(".result p");
+
+    switch (result) {
+        case "Draw":
+            resultDiv.textContent = `${humanChoice} draws ${computerChoice}`;
+            break;
+        
+        case "Win":
+            resultDiv.textContent = `${humanChoice} beats ${computerChoice}`;
+            let newUserScore = parseInt(userScore.textContent) + 1;
+            userScore.textContent = newUserScore;
+            break;
+
+        case "Lose":
+            resultDiv.textContent = `${humanChoice} loses vs. ${computerChoice}`;
+            let newComputerScore = parseInt(computerScore.textContent) + 1;
+            computerScore.textContent = newComputerScore
+    }
+}
+
 function playRound(event) {
     const humanChoice = event.target.id;
     const computerChoice = getComputerChoice();
     const result = isWin(humanChoice, computerChoice);
+    updateDOM(result, humanChoice, computerChoice);
 }
-
-let computerScore = 0
-let humanScore = 0
 
 const buttons = document.querySelectorAll(".choice");
     buttons.forEach(button => {
